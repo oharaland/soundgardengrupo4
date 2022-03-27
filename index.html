@@ -8,6 +8,11 @@
     <title>Sound Garden</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+     
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,12 +21,44 @@
         <img src="img/Sound-logo (1).png" width="300" alt="">
     </header>
     <main>
-        <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #F8BBD0; color: #fff">
-            <div class="text-center">
-                <h1>Adicione um banner maneiro aqui</h1>
-            </div>
+        <section class="full d-flex justify-content-center align-items-center" style="background-color: #e91e63">
+            
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+              
+               
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="./img/alok.jpg" alt="Alok">
+                  </div>
+              
+                  <div class="item">
+                    <img src="./img/foofighters.jpg" alt="Foo Fighters">
+                  </div>
+              
+                  <div class="item">
+                    <img src="./img/pablovittar.jpg" alt="Pablo Vittar">
+                  </div>
+                </div>
+              
+                
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Anterior</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Próximo</span>
+                </a>
+              </div>
+
         </section>
+
         <section class="full">
             <div class="container text-center ">
                 <h2>Próximos eventos</h2>
@@ -80,7 +117,7 @@
                             quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
                     </div>
                     <div class="col bottomcontainer">
-                        <img class="imagebottom"src="img/music.svg" width="500px">
+                        <img class="imagebottom" src="img/music.svg" width="500px">
                     </div>
                 </div>
             </div>
@@ -89,8 +126,8 @@
     </main>
     <footer>
         <div class="container d-flex justify-content-center align-items-center">
-            <a  href="index.html">
-                <img class="bottomlogo"src="img/Sound-logo-black (1).png" width="200px" alt="">
+            <a href="index.html">
+                <img class="bottomlogo" src="img/Sound-logo-black (1).png" width="200px" alt="">
             </a>
             <nav>
                 <ul>
