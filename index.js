@@ -21,21 +21,24 @@ const listaDeEventos = [{
 //função adicionar novo evento
 
 function novoEvento (
-  data,
-  titulo,
+  nome,
   atracoes,
+  descricao,
+  data,
+  lotacao,
 ){
    var idNovoEvento = listaDeEventos.length + 1 
    const novoEventoAdd = {
     id: idNovoEvento,
-    data,
-    titulo ,
+    nome,
     atracoes,
+    descricao,
+    data,
+    lotacao,
    }
   listaDeEventos.push(novoEventoAdd),
-  console.log(`Novo evento ${titulo} inserido com sucesso!`)
+  console.log(`Novo evento ${nome} inserido com sucesso!`)
 }
-
 /*teste efetuado para confirmar o código, principalmente no que se refere à inserção automática do Id:
 novoEvento ('25/03/2022 20:00', 'Universo Paralelo', 'Linn da Quebrada, Arthur Aguiar, Thiago Abravanel'
 )
