@@ -8,19 +8,19 @@ const inputLotacao = document.querySelector("#lotacao");
 const listaDeEventos = [{
   id: 1,
   data: '05/03/2022 20:00',
-  titulo: 'Festival Coala',
+  nome: 'Festival Coala',
   atracoes: 'Miley Cyrus, Liniker, Smashing Pumpkins',
 },
 {
   id: 2,
   data: '05/03/2022 20:00',
-  titulo: 'Indie Fest',
+  nome: 'Indie Fest',
   atracoes:'Arctic Monkeys, The Kooks, Hiatus Kaiyote',
 },
 {
   id: 3,
   data: '05/03/2022 20:00	',
-  titulo: 'Bourbon Jazz Festival',
+  nome: 'Bourbon Jazz Festival',
   atracoes:'Esperanza Spalding, Zimbo Trio, Serial Funkers',
 }
 ];
