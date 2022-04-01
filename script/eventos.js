@@ -1,9 +1,10 @@
 //CODE CSZ
 //Incluir HTML
-const indexHTML = document.querySelector("main");
-console.log(indexHTML);
 
-indexHTML.innerHTML += `<section class="my-modal">
+const eventosHTML = document.querySelector("main");
+console.log(eventosHTML);
+
+eventosHTML.innerHTML += `<section class="my-modal">
 <div class="modal">
     <h2>Reserva de Ingresso</h2>
     <p>Por favor, preencha seus dados abaixo</p>
@@ -33,13 +34,15 @@ indexHTML.innerHTML += `<section class="my-modal">
     </form>
 </div>
 </section>`;
-console.log(indexHTML);
+console.log(eventosHTML);
 
 //Listar eventos com ID
+
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 const eventosLista = document.querySelector(
-  ".container.d-flex.justify-content-center.align-items-center.events"
+  ".container.d-flex.justify-content-center.align-items-center.flex-wrap"
 );
+console.log(eventosLista);
 const metodo = {
   method: "GET",
   redirect: "follow",
@@ -50,38 +53,16 @@ const listarEventos = async () => {
   const conteudoResposta = await resposta.json();
   let novaLista = "";
 
-  for (let index = 0; index < 3; index++) {
-    novaLista = `<article class="evento card p-5 m-3"><h2>${conteudoResposta[index].name} - ${conteudoResposta[index].scheduled}</h2>
+  for (let index = 0; index < conteudoResposta.length; index++) {
+    novaLista += `<div><article class="evento card p-5 m-3"><h2>${conteudoResposta[index].name} - ${conteudoResposta[index].scheduled}</h2>
     <h4>${conteudoResposta[index].attractions}</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
         dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
         nobis in inventore tenetur asperiores.</p>
         <p id="pid">IdEvento: ${conteudoResposta[index]._id}</p>
-    <a href="#" class="btn btn-primary">reservar ingresso</a>`;
+    <a href="#" class="btn btn-primary">reservar ingresso</a></div>`;
   }
   eventosLista.innerHTML = novaLista;
-
-  for (let index = 0; index < 2; index++) {
-    novaLista = `<article class="evento card p-5 m-3"><h2>${conteudoResposta[index].name} - ${conteudoResposta[index].scheduled}</h2>
-    <h4>${conteudoResposta[index].attractions}</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-        nobis in inventore tenetur asperiores.</p>
-        <p id="pid">IdEvento: ${conteudoResposta[index]._id}</p>
-    <a href="#" class="btn btn-primary">reservar ingresso</a>`;
-  }
-  eventosLista.innerHTML += novaLista;
-
-  for (let index = 0; index < 1; index++) {
-    novaLista = `<article class="evento card p-5 m-3"><h2>${conteudoResposta[index].name} - ${conteudoResposta[index].scheduled}</h2>
-    <h4>${conteudoResposta[index].attractions}</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-        nobis in inventore tenetur asperiores.</p>
-        <p id="pid">IdEvento: ${conteudoResposta[index]._id}</p>
-    <a href="#" class="btn btn-primary">reservar ingresso</a>`;
-  }
-  eventosLista.innerHTML += novaLista;
 };
 
 listarEventos();
